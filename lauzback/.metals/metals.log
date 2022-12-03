@@ -1,0 +1,1229 @@
+2022.12.03 15:43:03 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json[0m
+2022.12.03 15:43:04 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log[0m
+2022.12.03 15:43:04 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.[0m
+2022.12.03 15:43:06 INFO  time: initialize in 2.04s[0m
+2022.12.03 15:43:07 WARN  Build server is not auto-connectable.[0m
+2022.12.03 15:43:07 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:43:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1
+2022.12.03 15:43:12 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 3.2.0[0m
+2022.12.03 15:43:14 INFO  time: code lens generation in 1.51s[0m
+2022.12.03 15:43:16 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:43:17 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:43:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:412)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1963)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.12.03 15:43:39 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:43:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:412)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1963)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.12.03 15:44:06 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:44:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:412)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1963)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.12.03 15:44:17 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:45:39 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\build.sbt[0m
+2022.12.03 15:45:40 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\build.sbt[0m
+déc. 03, 2022 3:45:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\build.sbt
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\build.sbt
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\build.sbt
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:412)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1963)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.12.03 15:45:56 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:45:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:412)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1963)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+déc. 03, 2022 3:46:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:412)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1963)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.12.03 15:46:44 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:46:47 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTrace
+2022.12.03 15:48:59 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:51:42 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:51:49 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:53:16 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:57:44 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 15:58:56 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 3:59:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 795
+2022.12.03 15:59:50 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:00:14 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:03:27 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:12:05 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:12:58 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:13:24 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:13:24 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:13:39 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:15:22 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 4:15:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1199
+2022.12.03 16:17:04 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:17:26 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:17:38 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:18:32 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:18:51 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:19:01 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:20:09 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:20:12 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022.12.03 16:20:25 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 16:33:41 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 4:54:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 2185
+déc. 03, 2022 4:54:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 2207
+déc. 03, 2022 4:54:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 2209
+2022.12.03 16:55:43 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+déc. 03, 2022 4:59:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 2485
+2022.12.03 17:05:37 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala[0m
+2022.12.03 17:05:39 INFO  shutting down Metals[0m
+2022.12.03 17:05:57 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 17:05:58 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 17:05:58 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 17:05:59 INFO  time: initialize in 1.3s
+2022.12.03 17:06:01 WARN  Build server is not auto-connectable.
+2022.12.03 17:06:01 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+déc. 03, 2022 5:06:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1
+2022.12.03 17:06:05 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 17:07:48 INFO  shutting down Metals
+2022.12.03 17:07:56 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 17:07:57 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 17:07:57 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 17:07:58 INFO  time: initialize in 1.23s
+2022.12.03 17:07:59 WARN  Build server is not auto-connectable.
+2022.12.03 17:08:04 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\test\controllers\HomeControllerSpec.scala
+2022.12.03 17:08:06 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\test\controllers\HomeControllerSpec.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 17:08:08 INFO  time: code lens generation in 3.94s
+2022.12.03 17:08:12 INFO  running 'C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\bogos\AppData\Local\Temp\metals7587343491327191000\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.12.03 17:08:13 INFO  sbt thinks that server is already booting because of this exception:
+2022.12.03 17:08:13 ERROR sbt.internal.ServerAlreadyBootingException: java.io.IOException: Could not create lock for \\.\pipe\sbt-load8262919446807120422_lock, error 5
+2022.12.03 17:08:13 ERROR 	at sbt.internal.BootServerSocket.newSocket(BootServerSocket.java:356)
+2022.12.03 17:08:13 ERROR 	at sbt.internal.BootServerSocket.<init>(BootServerSocket.java:295)
+2022.12.03 17:08:13 ERROR 	at sbt.xMain$.getSocketOrExit(Main.scala:150)
+2022.12.03 17:08:13 ERROR 	at sbt.xMain$.bootServerSocket$lzycompute$1(Main.scala:77)
+2022.12.03 17:08:13 ERROR 	at sbt.xMain$.bootServerSocket$1(Main.scala:77)
+2022.12.03 17:08:13 ERROR 	at sbt.xMain$.withStreams$1(Main.scala:85)
+2022.12.03 17:08:13 ERROR 	at sbt.xMain$.run(Main.scala:121)
+2022.12.03 17:08:13 ERROR 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022.12.03 17:08:13 ERROR 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2022.12.03 17:08:13 ERROR 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2022.12.03 17:08:13 ERROR 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2022.12.03 17:08:13 ERROR 	at sbt.internal.XMainConfiguration.run(XMainConfiguration.java:57)
+2022.12.03 17:08:13 ERROR 	at sbt.xMain.run(Main.scala:46)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:111)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Launch$.withContextLoader(Launch.scala:131)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Launch$.run(Launch.scala:111)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:37)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Launch$.launch(Launch.scala:120)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Launch$.apply(Launch.scala:20)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Boot$.runImpl(Boot.scala:56)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Boot$.main(Boot.scala:18)
+2022.12.03 17:08:13 ERROR 	at xsbt.boot.Boot.main(Boot.scala)
+2022.12.03 17:08:13 ERROR Caused by: java.io.IOException: Could not create lock for \\.\pipe\sbt-load8262919446807120422_lock, error 5
+2022.12.03 17:08:13 ERROR 	at org.scalasbt.ipcsocket.Win32NamedPipeServerSocket.<init>(Win32NamedPipeServerSocket.java:129)
+2022.12.03 17:08:13 ERROR 	at org.scalasbt.ipcsocket.Win32NamedPipeServerSocket.<init>(Win32NamedPipeServerSocket.java:48)
+2022.12.03 17:08:13 ERROR 	at sbt.internal.BootServerSocket.newSocket(BootServerSocket.java:350)
+2022.12.03 17:08:13 ERROR 	... 21 more
+2022.12.03 17:08:13 INFO  time: ran 'sbt bloopInstall' in 1.21s
+2022.12.03 17:08:13 ERROR sbt command failed: C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\bogos\AppData\Local\Temp\metals7587343491327191000\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+déc. 03, 2022 5:08:41 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTrace
+déc. 03, 2022 5:08:41 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTrace
+déc. 03, 2022 5:08:42 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTrace
+2022.12.03 17:08:48 INFO  shutting down Metals
+2022.12.03 17:08:55 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 17:08:56 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 17:08:56 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 17:08:57 INFO  time: initialize in 1.3s
+2022.12.03 17:08:58 WARN  Build server is not auto-connectable.
+2022.12.03 17:08:58 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\test\controllers\HomeControllerSpec.scala
+2022.12.03 17:08:58 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+2022.12.03 17:08:58 INFO  skipping build import with status 'Failed'
+2022.12.03 17:09:01 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\test\controllers\HomeControllerSpec.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 17:09:02 INFO  time: code lens generation in 3.57s
+2022.12.03 17:09:21 INFO  running 'C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\bogos\AppData\Local\Temp\metals7318824442851017988\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.12.03 17:09:22 INFO  sbt thinks that server is already booting because of this exception:
+2022.12.03 17:09:22 ERROR sbt.internal.ServerAlreadyBootingException: java.io.IOException: Could not create lock for \\.\pipe\sbt-load8262919446807120422_lock, error 5
+2022.12.03 17:09:22 ERROR 	at sbt.internal.BootServerSocket.newSocket(BootServerSocket.java:356)
+2022.12.03 17:09:22 ERROR 	at sbt.internal.BootServerSocket.<init>(BootServerSocket.java:295)
+2022.12.03 17:09:22 ERROR 	at sbt.xMain$.getSocketOrExit(Main.scala:150)
+2022.12.03 17:09:22 ERROR 	at sbt.xMain$.bootServerSocket$lzycompute$1(Main.scala:77)
+2022.12.03 17:09:22 ERROR 	at sbt.xMain$.bootServerSocket$1(Main.scala:77)
+2022.12.03 17:09:22 ERROR 	at sbt.xMain$.withStreams$1(Main.scala:85)
+2022.12.03 17:09:22 ERROR 	at sbt.xMain$.run(Main.scala:121)
+2022.12.03 17:09:22 ERROR 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022.12.03 17:09:22 ERROR 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2022.12.03 17:09:22 ERROR 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2022.12.03 17:09:22 ERROR 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2022.12.03 17:09:22 ERROR 	at sbt.internal.XMainConfiguration.run(XMainConfiguration.java:57)
+2022.12.03 17:09:22 ERROR 	at sbt.xMain.run(Main.scala:46)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:111)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Launch$.withContextLoader(Launch.scala:131)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Launch$.run(Launch.scala:111)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:37)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Launch$.launch(Launch.scala:120)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Launch$.apply(Launch.scala:20)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Boot$.runImpl(Boot.scala:56)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Boot$.main(Boot.scala:18)
+2022.12.03 17:09:22 ERROR 	at xsbt.boot.Boot.main(Boot.scala)
+2022.12.03 17:09:22 ERROR Caused by: java.io.IOException: Could not create lock for \\.\pipe\sbt-load8262919446807120422_lock, error 5
+2022.12.03 17:09:22 ERROR 	at org.scalasbt.ipcsocket.Win32NamedPipeServerSocket.<init>(Win32NamedPipeServerSocket.java:129)
+2022.12.03 17:09:22 ERROR 	at org.scalasbt.ipcsocket.Win32NamedPipeServerSocket.<init>(Win32NamedPipeServerSocket.java:48)
+2022.12.03 17:09:22 ERROR 	at sbt.internal.BootServerSocket.newSocket(BootServerSocket.java:350)
+2022.12.03 17:09:22 ERROR 	... 21 more
+2022.12.03 17:09:22 INFO  time: ran 'sbt bloopInstall' in 1.06s
+2022.12.03 17:09:22 ERROR sbt command failed: C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\bogos\AppData\Local\Temp\metals7318824442851017988\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2022.12.03 17:10:52 INFO  shutting down Metals
+2022.12.03 17:16:19 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 17:16:19 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 17:16:19 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 17:16:21 INFO  time: initialize in 1.21s
+2022.12.03 17:16:22 WARN  Build server is not auto-connectable.
+2022.12.03 17:16:22 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+2022.12.03 17:16:22 INFO  skipping build import with status 'Failed'
+2022.12.03 17:16:26 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+2022.12.03 17:16:26 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 17:16:27 INFO  shutting down Metals
+2022.12.03 17:18:04 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 17:18:05 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 17:18:05 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 17:18:06 INFO  time: initialize in 1.2s
+2022.12.03 17:18:08 WARN  Build server is not auto-connectable.
+2022.12.03 17:18:08 WARN  no build target for: C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala
+2022.12.03 17:18:08 INFO  skipping build import with status 'Failed'
+2022.12.03 17:18:13 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 17:18:14 INFO  time: code lens generation in 5.84s
+2022.12.03 17:18:14 INFO  time: code lens generation in 4.88s
+2022.12.03 17:18:23 INFO  running 'C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\bogos\AppData\Local\Temp\metals18339747589076585280\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.12.03 17:18:24 INFO  [info] welcome to sbt 1.8.0 (AdoptOpenJDK Java 11.0.8)
+2022.12.03 17:18:25 INFO  [info] loading global plugins from C:\Users\bogos\.sbt\1.0\plugins
+2022.12.03 17:18:26 INFO  [info] loading settings for project lauzback-build-build-build from metals.sbt ...
+2022.12.03 17:18:26 INFO  [info] loading project definition from C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project\project
+2022.12.03 17:18:26 INFO  [info] loading settings for project lauzback-build-build from metals.sbt ...
+2022.12.03 17:18:26 INFO  [info] loading project definition from C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project
+2022.12.03 17:18:34 INFO  [success] Generated .bloop\lauzback-build-build.json
+2022.12.03 17:18:34 INFO  [success] Total time: 7 s, completed 3 dÃ©c. 2022 Ã  17:18:34
+2022.12.03 17:18:34 INFO  [info] loading settings for project lauzback-build from metals.sbt,plugins.sbt ...
+2022.12.03 17:18:34 INFO  [info] loading project definition from C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project
+2022.12.03 17:18:38 INFO  [success] Generated .bloop\lauzback-build.json
+2022.12.03 17:18:38 INFO  [success] Total time: 4 s, completed 3 dÃ©c. 2022 Ã  17:18:39
+2022.12.03 17:18:38 INFO  [info] loading settings for project root from build.sbt ...
+2022.12.03 17:18:38 INFO  [info]   __              __
+2022.12.03 17:18:38 INFO  [info]   \ \     ____   / /____ _ __  __
+2022.12.03 17:18:38 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2022.12.03 17:18:38 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2022.12.03 17:18:38 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2022.12.03 17:18:38 INFO  [info]       /_/               /____/
+2022.12.03 17:18:38 INFO  [info] 
+2022.12.03 17:18:38 INFO  [info] Version 2.8.18 running Java 11.0.8
+2022.12.03 17:18:38 INFO  [info] 
+2022.12.03 17:18:38 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2022.12.03 17:18:38 INFO  [info] https://www.playframework.com/sponsors
+2022.12.03 17:18:38 INFO  [info] 
+2022.12.03 17:18:47 INFO  [success] Generated .bloop\root.json
+2022.12.03 17:18:47 INFO  [success] Generated .bloop\root-test.json
+2022.12.03 17:18:47 INFO  [success] Total time: 7 s, completed 3 dÃ©c. 2022 Ã  17:18:47
+2022.12.03 17:18:47 INFO  time: ran 'sbt bloopInstall' in 24s
+2022.12.03 17:18:47 INFO  Attempting to connect to the build server...
+2022.12.03 17:18:47 INFO  Setting up current java home C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot in C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:18:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:19:03 INFO  Attempting to connect to the build server...
+2022.12.03 17:19:03 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:19:03 INFO  Attempting to connect to the build server...
+2022.12.03 17:19:03 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:19:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:19:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:19:06 INFO  time: Connected to build server in 19s
+2022.12.03 17:19:06 INFO  Connected to Build server: Bloop v1.5.4
+2022.12.03 17:19:06 INFO  time: Imported build in 0.18s
+2022.12.03 17:19:17 INFO  time: indexed workspace in 10s
+2022.12.03 17:19:18 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:19:29 INFO  time: compiled root in 11s
+2022.12.03 17:20:17 INFO  shutting down Metals
+2022.12.03 17:20:17 INFO  Shut down connection with build server.
+2022.12.03 17:20:17 INFO  Shut down connection with build server.
+2022.12.03 17:20:17 INFO  Shut down connection with build server.
+2022.12.03 17:20:23 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 17:20:24 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 17:20:24 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 17:20:25 INFO  time: initialize in 1.22s
+2022.12.03 17:20:27 INFO  Attempting to connect to the build server...
+2022.12.03 17:20:27 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:20:27 INFO  skipping build import with status 'Installed'
+2022.12.03 17:20:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:20:27 INFO  Attempting to connect to the build server...
+2022.12.03 17:20:27 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:20:27 INFO  Attempting to connect to the build server...
+2022.12.03 17:20:27 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:20:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:20:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:20:27 INFO  time: Connected to build server in 0.76s
+2022.12.03 17:20:27 INFO  Connected to Build server: Bloop v1.5.4
+2022.12.03 17:20:28 INFO  time: Imported build in 0.23s
+2022.12.03 17:20:31 INFO  no build target found for C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 17:20:32 INFO  time: code lens generation in 3.9s
+2022.12.03 17:20:35 INFO  time: indexed workspace in 7.36s
+2022.12.03 17:20:36 INFO  compiling root (8 scala sources and 1 java source)
+déc. 03, 2022 5:20:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+AVERTISSEMENT: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "build/taskFinish",
+  "params": {
+    "taskId": {
+      "id": "1"
+    },
+    "eventTime": 1670084437007,
+    "message": "Compiled \u0027root\u0027",
+    "status": 2,
+    "dataKind": "compile-report",
+    "data": {
+      "target": {
+        "uri": "file:/C:/Users/bogos/Documents/LausHack/lauzhack/lauzback/?id\u003droot"
+      },
+      "errors": 4,
+      "warnings": 0,
+      "isNoOp": false,
+      "isLastCycle": true
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.NullPointerException
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$1(Compilers.scala:243)
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$1$adapted(Compilers.scala:243)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.Compilers.didCompile(Compilers.scala:243)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$14(MetalsLanguageServer.scala:456)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$14$adapted(MetalsLanguageServer.scala:454)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$2(ForwardingMetalsBuildClient.scala:160)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1(ForwardingMetalsBuildClient.scala:157)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1$adapted(ForwardingMetalsBuildClient.scala:156)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.buildTaskFinish(ForwardingMetalsBuildClient.scala:156)
+	... 16 more
+
+2022.12.03 17:20:39 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:20:39 INFO  time: compiled root in 0.79s
+déc. 03, 2022 5:20:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 23
+2022.12.03 17:22:40 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:22:40 INFO  time: compiled root in 0.38s
+2022.12.03 17:22:58 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:22:58 INFO  time: compiled root in 0.46s
+2022.12.03 17:24:19 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:24:19 INFO  time: compiled root in 0.33s
+déc. 03, 2022 5:24:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.collection.immutable.List.flatMap(List.scala:79)
+	at scala.meta.internal.metals.codeactions.ImportMissingSymbol.joinActionEdits$1(ImportMissingSymbol.scala:39)
+	at scala.meta.internal.metals.codeactions.ImportMissingSymbol.$anonfun$contribute$18(ImportMissingSymbol.scala:135)
+	at scala.collection.StrictOptimizedIterableOps.map(StrictOptimizedIterableOps.scala:100)
+	at scala.collection.StrictOptimizedIterableOps.map$(StrictOptimizedIterableOps.scala:87)
+	at scala.collection.immutable.HashMap.map(HashMap.scala:39)
+	at scala.meta.internal.metals.codeactions.ImportMissingSymbol.$anonfun$contribute$16(ImportMissingSymbol.scala:131)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2022.12.03 17:25:30 INFO  time: code lens generation in 1.23s
+2022.12.03 17:25:30 INFO  time: code lens generation in 3.46s
+2022.12.03 17:25:49 INFO  running 'C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\bogos\AppData\Local\Temp\metals11940037992450135696\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.12.03 17:25:50 INFO  [info] welcome to sbt 1.8.0 (AdoptOpenJDK Java 11.0.8)
+2022.12.03 17:25:50 INFO  [info] loading global plugins from C:\Users\bogos\.sbt\1.0\plugins
+2022.12.03 17:25:52 INFO  [info] loading settings for project lauzback-build-build-build from metals.sbt ...
+2022.12.03 17:25:52 INFO  [info] loading project definition from C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project\project
+2022.12.03 17:25:52 INFO  [info] loading settings for project lauzback-build-build from metals.sbt ...
+2022.12.03 17:25:52 INFO  [info] loading project definition from C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project
+2022.12.03 17:25:55 INFO  [success] Generated .bloop\lauzback-build-build.json
+2022.12.03 17:25:55 INFO  [success] Total time: 2 s, completed 3 dÃ©c. 2022 Ã  17:25:55
+2022.12.03 17:25:55 INFO  [info] loading settings for project lauzback-build from metals.sbt,plugins.sbt ...
+2022.12.03 17:25:55 INFO  [info] loading project definition from C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project
+2022.12.03 17:25:56 INFO  [success] Generated .bloop\lauzback-build.json
+2022.12.03 17:25:56 INFO  [success] Total time: 1 s, completed 3 dÃ©c. 2022 Ã  17:25:56
+2022.12.03 17:25:58 INFO  [info] loading settings for project root from build.sbt ...
+2022.12.03 17:25:58 INFO  [info]   __              __
+2022.12.03 17:25:58 INFO  [info]   \ \     ____   / /____ _ __  __
+2022.12.03 17:25:58 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2022.12.03 17:25:58 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2022.12.03 17:25:58 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2022.12.03 17:25:58 INFO  [info]       /_/               /____/
+2022.12.03 17:25:58 INFO  [info] 
+2022.12.03 17:25:58 INFO  [info] Version 2.8.18 running Java 11.0.8
+2022.12.03 17:25:58 INFO  [info] 
+2022.12.03 17:25:58 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2022.12.03 17:25:58 INFO  [info] https://www.playframework.com/sponsors
+2022.12.03 17:25:58 INFO  [info] 
+2022.12.03 17:26:02 INFO  [success] Generated .bloop\root.json
+2022.12.03 17:26:02 INFO  [success] Generated .bloop\root-test.json
+2022.12.03 17:26:02 INFO  [success] Total time: 4 s, completed 3 dÃ©c. 2022 Ã  17:26:03
+2022.12.03 17:26:03 INFO  time: ran 'sbt bloopInstall' in 13s
+2022.12.03 17:26:03 INFO  Disconnecting from Bloop session...
+2022.12.03 17:26:03 INFO  Shut down connection with build server.
+2022.12.03 17:26:03 INFO  Shut down connection with build server.
+2022.12.03 17:26:03 INFO  Shut down connection with build server.
+2022.12.03 17:26:03 INFO  Attempting to connect to the build server...
+2022.12.03 17:26:03 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:26:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:26:03 INFO  Attempting to connect to the build server...
+2022.12.03 17:26:03 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:26:03 INFO  Attempting to connect to the build server...
+2022.12.03 17:26:03 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 17:26:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:26:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 17:26:03 INFO  time: Connected to build server in 74ms
+2022.12.03 17:26:03 INFO  Connected to Build server: Bloop v1.5.4
+2022.12.03 17:26:06 INFO  time: indexed workspace in 2.71s
+2022.12.03 17:26:06 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:26:07 INFO  time: compiled root in 1.66s
+déc. 03, 2022 5:26:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:26:17 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:26:17 INFO  time: compiled root in 0.23s
+déc. 03, 2022 5:26:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:26:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:26:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:26:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:27:20 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:27:20 INFO  time: compiled root in 0.23s
+déc. 03, 2022 5:27:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:27:46 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:27:46 INFO  time: compiled root in 0.21s
+déc. 03, 2022 5:27:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:27:53 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:27:53 INFO  time: compiled root in 0.19s
+déc. 03, 2022 5:27:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:27:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:28:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:28:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 335
+déc. 03, 2022 5:28:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:28:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:28:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:28:41 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:28:41 INFO  time: compiled root in 0.21s
+déc. 03, 2022 5:29:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:29:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:29:25 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:29:25 INFO  time: compiled root in 0.21s
+2022.12.03 17:31:47 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:31:47 INFO  time: compiled root in 0.22s
+2022.12.03 17:32:15 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:32:15 INFO  time: compiled root in 0.17s
+déc. 03, 2022 5:32:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+déc. 03, 2022 5:33:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 902
+déc. 03, 2022 5:34:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.NullPointerException
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+
+2022.12.03 17:34:31 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:34:31 INFO  time: compiled root in 0.21s
+2022.12.03 17:35:16 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:35:16 INFO  time: compiled root in 0.24s
+2022.12.03 17:35:40 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:35:40 INFO  time: compiled root in 0.22s
+2022.12.03 17:35:54 INFO  compiling root (8 scala sources and 1 java source)
+2022.12.03 17:35:58 INFO  time: compiled root in 4.79s
+déc. 03, 2022 5:41:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1143
+déc. 03, 2022 6:12:58 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFOS: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+déc. 03, 2022 6:12:58 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:422)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:140)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:113)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:102)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:974)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:822)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+déc. 03, 2022 6:13:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1210
+déc. 03, 2022 6:13:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1226
+2022.12.03 18:13:23 INFO  compiling root (1 scala source)
+2022.12.03 18:13:23 INFO  time: compiled root in 0.33s
+2022.12.03 18:13:25 INFO  compiling root (1 scala source)
+2022.12.03 18:13:25 INFO  time: compiled root in 0.14s
+2022.12.03 18:13:30 INFO  compiling root (1 scala source)
+2022.12.03 18:13:30 INFO  time: compiled root in 0.2s
+2022.12.03 18:14:06 INFO  compiling root (1 scala source)
+2022.12.03 18:14:06 INFO  time: compiled root in 0.15s
+déc. 03, 2022 6:14:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVERTISSEMENT: Unmatched cancel notification for request id 1296
+2022.12.03 18:14:15 INFO  compiling root (1 scala source)
+2022.12.03 18:14:15 INFO  time: compiled root in 0.16s
+2022.12.03 18:14:46 INFO  compiling root (1 scala source)
+2022.12.03 18:14:46 INFO  time: compiled root in 0.14s
+2022.12.03 18:15:12 INFO  compiling root (1 scala source)
+2022.12.03 18:15:12 INFO  time: compiled root in 0.13s
+2022.12.03 18:15:25 INFO  compiling root (1 scala source)
+2022.12.03 18:15:25 INFO  time: compiled root in 0.13s
+2022.12.03 18:16:13 INFO  compiling root (1 scala source)
+2022.12.03 18:16:13 INFO  time: compiled root in 0.13s
+2022.12.03 18:16:18 INFO  shutting down Metals
+2022.12.03 18:16:18 INFO  Shut down connection with build server.
+2022.12.03 18:16:18 INFO  Shut down connection with build server.
+2022.12.03 18:16:18 INFO  Shut down connection with build server.
+2022.12.03 18:16:25 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\lsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.03 18:16:25 INFO  logging to file C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\metals.log
+2022.12.03 18:16:25 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\bogos\Documents\LausHack\lauzhack\lauzback' for client Visual Studio Code 1.73.1.
+2022.12.03 18:16:26 INFO  time: initialize in 1.26s
+2022.12.03 18:16:28 INFO  Attempting to connect to the build server...
+2022.12.03 18:16:28 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 18:16:28 INFO  skipping build import with status 'Installed'
+2022.12.03 18:16:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 18:16:28 INFO  Attempting to connect to the build server...
+2022.12.03 18:16:28 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 18:16:28 INFO  Attempting to connect to the build server...
+2022.12.03 18:16:28 INFO  Bloop uses C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot defined at C:\Users\bogos\.bloop\bloop.json
+2022.12.03 18:16:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 18:16:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\bogos\Documents\LausHack\lauzhack\lauzback\project\.metals\bsp.trace.json or C:\Users\bogos\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.12.03 18:16:28 INFO  time: Connected to build server in 0.39s
+2022.12.03 18:16:28 INFO  Connected to Build server: Bloop v1.5.4
