@@ -1,0 +1,2 @@
+TO BUILD:
+sbt dist
