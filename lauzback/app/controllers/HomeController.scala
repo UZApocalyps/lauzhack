@@ -63,22 +63,43 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
           entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
         }
 
-
-
-        /*
-        val bite = s.execute(s"SELECT * FROM ticket WHERE id = $ticket_id AND user_id = '$uid'")
-        // get ticket date from result set
-        val resultSet2 = s.getResultSet
-
-        val ticket: Ticket = new Ticket("bite", entries.toArray)
-*/
-
         Ok(Json.obj("shopName" -> "Lidl", "articles" -> entries2))
       }
     }(databaseExecutionContext)
   }
 
+  def tickets(uid: String): Action[AnyContent] = Action.async { request =>
+    Future {
+      db.withConnection { conn =>
+        val s = conn.createStatement()
 
+        var toto = List[JsValue]()
+        val chatte = s.execute(s"SELECT id FROM receipt WHERE user_id=\"" + uid + "\"")
+        val resultSet = s.getResultSet
+        var  ids = List[String]()
+        while (resultSet.next()) {
+          val id = resultSet.getString("id")
+          ids = id :: ids
+        }
+
+        for(id <- ids) {
+          val chattouille = s.execute("SELECT * FROM receipt_entry WHERE receipt_id = " + id)
+
+          // iterate over the result set
+          val resultSet2 = s.getResultSet
+          var entries2 = List[JsValue]()
+          while (resultSet2.next()) {
+            val entry = Article(resultSet2.getString("produce_name"), resultSet2.getString("unit_price"), resultSet2.getString("quantity"))
+            entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
+          }
+
+          toto =  Json.obj("shopName" -> "Lidl", "articles" -> Json.arr(entries2)) :: toto
+        }
+
+        Ok(Json.arr(toto))
+      }
+    }(databaseExecutionContext)
+  }
 
 
   def createTicket():Action[AnyContent] = Action.async { request =>

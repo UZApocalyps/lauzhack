@@ -7,7 +7,7 @@
 GET     /                           controllers.HomeController.index()
 POST    /create_ticket              controllers.HomeController.createTicket()
 GET     /shopping                   controllers.HomeController.shopping()
-#GET     /tickets                    controllers.HomeController.tickets()
+GET     /tickets                    controllers.HomeController.tickets(uid)
 GET     /ticket                     controllers.HomeController.ticket(uid, ticket_id)
 
 # Map static resources from the /public folder to the /assets URL path
