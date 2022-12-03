@@ -63,7 +63,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
           entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
         }
 
-        Ok(Json.obj("shopName" -> "Lidl", "articles" -> entries2))
+        Ok(Json.obj("id" -> ticket_id, "shopName" -> "Lidl", "articles" -> entries2))
       }
     }(databaseExecutionContext)
   }
@@ -93,7 +93,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
             entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
           }
 
-          toto =  Json.obj("shopName" -> "Lidl", "articles" -> Json.arr(entries2)) :: toto
+          toto =  Json.obj("id" -> id, "shopName" -> "Lidl", "articles" -> Json.arr(entries2)) :: toto
         }
 
         Ok(Json.arr(toto))
@@ -141,7 +141,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
         val resultSet = s.getResultSet
 
 
-        Ok(Json.toJson(result));
+        Ok(Json.toJson(key));
       }
       }(databaseExecutionContext)
     }
