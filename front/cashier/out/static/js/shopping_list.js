@@ -4,17 +4,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const init = () => {
-    const sendDestination = "http://192.168.195.92:9000/test";
+    const sendDestination = "create_ticket";
+    const websocketUrl = "ws://localhost:8080";
 
+
+    const checkCircle = document.querySelector(".check-circle");
     const qrCodeTarget = document.getElementById("qrCodeTarget");
-
-    const currentId = undefined;
+    const popupBackground = document.getElementById("popupBackground");
+    const popup = document.getElementById("popup");
+    let currentId = undefined;
     const showQrCodeButton = document.getElementById("showQrCode");
     const articleContainer = document.querySelector(".items");
     const outLogContainer = document.querySelector(".outLog");
     const inLogContainer = document.querySelector(".inLog");
     const shopNameInput = document.querySelector("#shopName");
     const sendButton = document.querySelector("#sendButton");
+
+    const showPopup = () => {
+        popup.classList.remove("second");
+        popup.classList.add("first");
+        popup.classList.add("show");
+        popupBackground.classList.add("show");
+    }
+
+    const hidePopup = () => {
+        popup.classList.remove("second");
+        popup.classList.add("first");
+        popup.classList.remove("show");
+        popupBackground.classList.remove("show");
+    }
 
     const articles = [
         {
@@ -114,11 +132,32 @@ const init = () => {
             qrCode.clear();
             qrCode.makeCode(currentId);
         }
-        
+        showPopup();
+        const ws = new WebSocket(websocketUrl);
+        ws.onopen = () => {
+            ws.send(currentId);
+            ws.onmessage = (message) => {
+                console.log("Got message : ", message);
+                if(message.data === "ok") {
+                    popup.classList.remove("first");
+                    popup.classList.add("second");
+                    checkCircle.classList.remove("animate");
+                    setTimeout(() =>  {
+                        checkCircle.classList.add("animate");
+                        setTimeout(() => {
+                            hidePopup();
+                        }, 5000);
+                    }, 0);
+                } else {
+                    console.warn("Got not 'ok' message. Message: ", message.data);
+                }
+            }
+        }
     } 
 
     const sendList = () => {
         const data = {};
+        data.date = new Date();
         if(shopNameInput.value === "") {
             shopNameInput.value = "Lidle";
         }
@@ -141,9 +180,10 @@ const init = () => {
             headers: {'Content-Type': 'application/json'}, 
             body: JSON.stringify(data, undefined, 3)
         }).then(res => {
-            showQrCodeButton.style.display = null;
             res.json().then((res) => {
                 inLogContainer.textContent = JSON.stringify(res, undefined, 2);
+                showQrCodeButton.style.display = null;
+                currentId = res.token;
             }, (err) => {
                 console.error(err);
             });
@@ -152,4 +192,5 @@ const init = () => {
 
     generateArticles();
     sendButton.addEventListener("click", sendList);
+    showQrCodeButton.addEventListener("click", showQrCode);
 }

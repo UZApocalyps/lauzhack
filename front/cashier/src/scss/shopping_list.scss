@@ -59,10 +59,231 @@ body {
     }
 }
 
-.popup {
+$transitionTime : 0.3s;
+.background {
+    //display: none;
     position: absolute;
-    display: none;
+    z-index: -1;
+    background-color: white;
+    filter: blur(1px);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    display: flex;
+    transition: opacity $transitionTime, z-index 0s $transitionTime;
+
     &.show {
-        display: flex;
+        opacity: 0.8;
+        z-index: 1;
+        transition: opacity $transitionTime;
     }
 }
+.popup {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 0;
+    z-index: -1;
+    display: flex;
+    transition: opacity $transitionTime, z-index 0s $transitionTime;
+    overflow: hidden;
+    &.show {
+        opacity: 1;
+        z-index: 2;
+        transition: opacity $transitionTime;
+    }
+    &.first {
+        .firstPart {
+            opacity: 1;
+        }
+    }
+    &.second {
+        .secondPart {
+            opacity: 1;
+            .continueButton:after {
+                width: 100%;
+            }
+        }
+    }
+
+    > div {
+        padding: 25px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .firstPart, .secondPart {
+        opacity: 0;
+        transition: opacity $transitionTime;
+        display: flex;
+    }
+
+    .firstPart {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        .content {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            #qrCodeTarget {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 300px;
+                height: 300px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .secondPart {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        .continueButton {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            background-color:#00CAD9;
+            color: white;
+            font-weight: bold;
+
+            &:after {
+                content: "";
+                position: absolute;
+                background-color: black;
+                width: 0;
+                height: 3px;
+                top: 0;
+                left: 0;
+                opacity: 0.3;
+                transition: width 4.8s linear;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// ============================================================= Long ass animation https://codepen.io/hyegineer/pen/EqbZyR
+@mixin position(
+  $t: null,
+  $r: null,
+  $b: null,
+  $l: null,
+  $transX: null,
+  $transY: null
+) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  transform: translate($transX, $transY);
+}
+
+$checkSize : 200px;
+.check-circle {
+    width: $checkSize;
+    height: $checkSize;
+    background-color: #00CAD9;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    position: relative;
+    animation-timing-function: cubic-bezier(.42,.97,.52,1.49);
+    &.animate {
+        animation: circleScale 0.5s ease 1;
+
+        .check-circle__mark:after {
+            animation-name: checkmark;
+        }
+    }
+    &__mark{
+
+        display: block;
+
+        &:after{
+
+            @include position($t: $checkSize / 2, $l: $checkSize / 4, $transX: 0, $transY: 0);
+            
+            content: '';
+            opacity: 0;
+            border-right: 6px solid #fff;
+            border-top: 6px solid #fff;
+            transform-origin: left top;
+            animation-delay: 0.6s;
+            animation-duration: 900ms;
+            transform: scaleX(-1) rotate(135deg);
+            animation-timing-function: cubic-bezier(.42,.97,.52,1.49);
+            animation-fill-mode: forwards;
+
+        }
+
+    }
+
+}
+
+@keyframes circleScale {
+
+    0%{
+
+        opacity: 0;
+        transform: scale(0.5);
+
+    }
+
+    50%{
+
+        transform: scale(1.1);
+
+    }
+
+    100%{
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+}
+
+$checkmarkSize: 100px;
+@keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+    20% {
+      height: 0;
+      width: $checkmarkSize / 2;
+      opacity: 1;
+    }
+    40% {
+      height: $checkmarkSize;
+      width: $checkmarkSize / 2;
+      opacity: 1;
+    }
+    100% {
+      height: $checkmarkSize;
+      width: $checkmarkSize / 2;
+      opacity: 1;
+    }
+  }

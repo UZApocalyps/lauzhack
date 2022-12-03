@@ -11,16 +11,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-    <div class="popup">
+    <div class="background" id="popupBackground"></div>
+    <div class="popup first" id="popup">
         <div class="firstPart">
             <div class="header">
                 <h3>Scan your QRCode to get your receipt</h3>
             </div>
-            <div id="qrCodeTarget"></div>
+            <div class="content">
+                <div id="qrCodeTarget">
+                    <!--<img src="/static/picture/qrcode.png" alt="">-->
+                </div>
+            </div>
         </div>
         <div class="secondPart">
-            <h3>Your receipt has been transfered !</h3>
-            <h3>Thank you for your purschases and see you next time !</h3>
+            <div class="check-circle">
+                <div class="check-circle__mark"></div>
+            </div>
+            <div class="continueButton">
+                Continue
+            </div>
         </div>
     </div>
     <h1>Create your shopping list</h1>
