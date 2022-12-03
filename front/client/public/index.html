@@ -2,29 +2,27 @@
 
 <head>
     <link rel="manifest" href="./js/manifest.webmanifest">
-    <script src="./js/main.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./serviceWorker.js')
-                .then(function (registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }).catch(function (err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-        }
-    </script>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="user-scalable=no" />
+    <link rel="apple-touch-icon" sizes="192x192" href="./icon-192x192.png">
+
+    <script src="./js/pwa.js"></script>
+
 </head>
 
-<body>
-    <button class="btn">open camera</button>
-    <input type="file" accept="image/*;capture=camera">
-
-    <p class="log">
-
-    </p>
-    <script src="./js/pwa.js"></script>
+<body scroll="no">
+    <div class="main-container">
+        <div class="glass-container">
+            <div class="glass-title">
+                <h1>Please log in to continue</h1>
+            </div>
+            <div class="glass-content">
+                <div class="glass-content-item">
+                    <a href="/login" class="button">Click here to login</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

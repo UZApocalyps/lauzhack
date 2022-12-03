@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link rel="manifest" href="./js/manifest.webmanifest">
+    <script defer src="./js/main.js" type="module"></script>
+    <script  src="./js/qr-scanner-worker.min.js" type="module"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./serviceWorker.js')
+                .then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <button class="btn">open camera</button>
+    <input type="file" accept="image/*;capture=camera">
+    <video id="video"></video>
+
+    <script src="./js/pwa.js"></script>
+</body>
+
+</html>
