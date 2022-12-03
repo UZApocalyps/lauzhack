@@ -128,7 +128,8 @@ body {
       width: 100%;
       background-color: #00CAD9;
       color: white;
-      font-weight: bold; }
+      font-weight: bold;
+      cursor: pointer; }
       .popup .secondPart .continueButton:after {
         content: "";
         position: absolute;

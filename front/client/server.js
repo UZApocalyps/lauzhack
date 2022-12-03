@@ -7,7 +7,7 @@ const app = express()
 https.createServer({
   key: fs.readFileSync('./certs/server.key'),
   cert: fs.readFileSync('./certs/server.cert')
-}, app).listen(3000, () => {
+}, app).listen(3000 , () => {
 
   app.use(express.static(path.join(__dirname, 'public')))
   app.get('/', function (req, res) {

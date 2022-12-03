@@ -2,12 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     init();
 });
 
-
 const init = () => {
     const sendDestination = "create_ticket";
     const websocketUrl = "ws://localhost:8080";
 
-
+    const continueButton = document.getElementById("continueButton");
     const checkCircle = document.querySelector(".check-circle");
     const qrCodeTarget = document.getElementById("qrCodeTarget");
     const popupBackground = document.getElementById("popupBackground");
@@ -133,26 +132,20 @@ const init = () => {
             qrCode.makeCode(currentId);
         }
         showPopup();
-        const ws = new WebSocket(websocketUrl);
-        ws.onopen = () => {
-            ws.send(currentId);
-            ws.onmessage = (message) => {
-                console.log("Got message : ", message);
-                if(message.data === "ok") {
-                    popup.classList.remove("first");
-                    popup.classList.add("second");
-                    checkCircle.classList.remove("animate");
-                    setTimeout(() =>  {
-                        checkCircle.classList.add("animate");
-                        setTimeout(() => {
-                            hidePopup();
-                        }, 5000);
-                    }, 0);
-                } else {
-                    console.warn("Got not 'ok' message. Message: ", message.data);
-                }
-            }
+        const showSuccess = () => {
+
         }
+        setTimeout(() => {
+            popup.classList.remove("first");
+            popup.classList.add("second");
+            checkCircle.classList.remove("animate");
+            setTimeout(() =>  {
+                checkCircle.classList.add("animate");
+                setTimeout(() => {
+                    hidePopup();
+                }, 5000);
+            }, 0);
+        });
     } 
 
     const sendList = () => {
@@ -191,6 +184,7 @@ const init = () => {
     }
 
     generateArticles();
+    continueButton.addEventListener("click", hidePopup);
     sendButton.addEventListener("click", sendList);
     showQrCodeButton.addEventListener("click", showQrCode);
 }

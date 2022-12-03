@@ -21,12 +21,6 @@ wss.on('connection', function connection(ws) {
 
 app.use(express.json());
 
-
-app.get("/", (req, res) => {
-    console.log("Getting a request on /");
-    res.sendFile(resolve("./src/pages/index.html"));
-});
-
 app.get("/shopping_list", (req, res) => {
     res.sendFile(resolve("./src/pages/shopping_list.html"));
 });
