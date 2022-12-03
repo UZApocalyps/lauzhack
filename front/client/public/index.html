@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="manifest" href="./js/manifest.webmanifest">
+    <script src="./js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./serviceWorker.js')
+                .then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <button class="btn">open camera</button>
+    <input type="file" accept="image/*;capture=camera">
+
+    <p class="log">
+
+    </p>
+    <script src="./js/pwa.js"></script>
+</body>
+
+</html>
