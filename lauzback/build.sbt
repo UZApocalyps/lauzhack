@@ -11,3 +11,4 @@ lazy val root = (project in file("."))
       "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
     )
   )
+  libraryDependencies += "net.liftweb" %% "lift-json" % "3.5.0"
