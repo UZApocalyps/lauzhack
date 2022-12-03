@@ -2,13 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
     init();
 });
 
-
 const init = () => {
-    const sendDestination = "http://localhost:9000/create_ticket";
+    const sendDestination = "create_ticket";
+    const websocketUrl = "ws://localhost:8080";
 
+    const continueButton = document.getElementById("continueButton");
+    const checkCircle = document.querySelector(".check-circle");
     const qrCodeTarget = document.getElementById("qrCodeTarget");
-
-    const currentId = undefined;
+    const popupBackground = document.getElementById("popupBackground");
+    const popup = document.getElementById("popup");
+    let currentId = undefined;
     const showQrCodeButton = document.getElementById("showQrCode");
     const articleContainer = document.querySelector(".items");
     const outLogContainer = document.querySelector(".outLog");
@@ -16,29 +19,23 @@ const init = () => {
     const shopNameInput = document.querySelector("#shopName");
     const sendButton = document.querySelector("#sendButton");
 
+    const showPopup = () => {
+        popup.classList.remove("second");
+        popup.classList.add("first");
+        popup.classList.add("show");
+        popupBackground.classList.add("show");
+    }
+
+    const hidePopup = () => {
+        popup.classList.remove("second");
+        popup.classList.add("first");
+        popup.classList.remove("show");
+        popupBackground.classList.remove("show");
+    }
+
     const articles = [
         {
             name: "Bread",
-            quantity: 1,
-            price: 1.5,
-        },
-        {
-            name: "Potatoe bread",
-            quantity: 1,
-            price: 1.5,
-        },
-        {
-            name: "banana",
-            quantity: 1,
-            price: 1.5,
-        },
-        {
-            name: "apple",
-            quantity: 1,
-            price: 1.5,
-        },
-        {
-            name: "tin foil",
             quantity: 1,
             price: 1.5,
         },
@@ -59,7 +56,7 @@ const init = () => {
         },
         {
             name: "Eggs",
-            quantity: 2,
+            quantity: 1,
             price: 3.5,
         }
     ];
@@ -117,7 +114,7 @@ const init = () => {
             item.appendChild(quantityContainer);
             tbody.appendChild(item);
         }
-        
+
     }
 
     let qrCode = undefined;
@@ -134,11 +131,26 @@ const init = () => {
             qrCode.clear();
             qrCode.makeCode(currentId);
         }
-        
-    } 
+        showPopup();
+        const showSuccess = () => {
+
+        }
+        setTimeout(() => {
+            popup.classList.remove("first");
+            popup.classList.add("second");
+            checkCircle.classList.remove("animate");
+            setTimeout(() =>  {
+                checkCircle.classList.add("animate");
+                setTimeout(() => {
+                    hidePopup();
+                }, 5000);
+            }, 0);
+        });
+    }
 
     const sendList = () => {
         const data = {};
+        data.date = new Date();
         if(shopNameInput.value === "") {
             shopNameInput.value = "Lidle";
         }
@@ -158,12 +170,13 @@ const init = () => {
 
         fetch(sendDestination, {
             method: "POST",
-            headers: {'Content-Type': 'application/json'}, 
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data, undefined, 3)
         }).then(res => {
-            showQrCodeButton.style.display = null;
             res.json().then((res) => {
                 inLogContainer.textContent = JSON.stringify(res, undefined, 2);
+                showQrCodeButton.style.display = null;
+                currentId = res.token;
             }, (err) => {
                 console.error(err);
             });
@@ -171,5 +184,7 @@ const init = () => {
     }
 
     generateArticles();
+    continueButton.addEventListener("click", hidePopup);
     sendButton.addEventListener("click", sendList);
+    showQrCodeButton.addEventListener("click", showQrCode);
 }
