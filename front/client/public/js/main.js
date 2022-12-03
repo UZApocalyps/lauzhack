@@ -23,6 +23,15 @@ var temp = `{
 }`
 
 document.addEventListener("DOMContentLoaded", function (event) {
+
+    //Easter egg :D
+    document.querySelector('.logo').addEventListener('click', function () {
+        if (localStorage.getItem('uid') == "code_lyoko") {
+            let audio = document.querySelector("#audio")
+            audio.play()
+        }
+    })
+
     loadticket()
     var qrScanner = null;
     document.querySelector("#close-popup").addEventListener("click", function () {
