@@ -11,3 +11,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 GET     /test                       controllers.TestController.getAll
 GET     /test2                      controllers.TestController.updateSomething
+
+POST    /registerticket             controllers.ReceiptController.registerReceipt
+
+GET      /ws                        controllers.WebSocket.socket
