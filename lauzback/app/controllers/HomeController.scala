@@ -65,7 +65,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
       db.withConnection { conn =>
         val s = conn.createStatement()
 
-        //val chatte = s.execute(s"SELECT * FROM receipt_entry WHERE receipt_id = $ticket_id")
+        val chatte = s.execute(s"SELECT * FROM receipt_entry WHERE receipt_id = $ticket_id")
 
         // iterate over the result set
         val resultSet = s.getResultSet
@@ -75,7 +75,12 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
           entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
         }
 
-        Ok(Json.obj("id" -> ticket_id, "shopName" -> "Lidl", "articles" -> entries2))
+        val doggo = s.execute(s"SELECT date FROM receipt WHERE id = $ticket_id")
+        val resultSet2 = s.getResultSet
+        resultSet2.next()
+        val date = resultSet2.getString("date")
+
+        Ok(Json.obj("id" -> ticket_id, "date" -> date, "shopName" -> "Lidl", "articles" -> entries2))
       }
     }(databaseExecutionContext)
   }
@@ -105,7 +110,6 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
   }
 
   def tickets(uid: String): Action[AnyContent] = Action.async { request =>
-    println("bite au cul")
     Future {
       db.withConnection { conn =>
         val s = conn.createStatement()
@@ -127,7 +131,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
           val resultSet2 = s.getResultSet
           var entries2 = List[JsValue]()
           while (resultSet2.next()) {
-            val entry = Article(resultSet2.getString("produce_name"), resultSet2.getString("unit_price"), resultSet2.getString("quantity"))
+            val entry = Article(resultSet2.getString("produce_name"), resultSet2.getString("quantity"), resultSet2.getString("unit_price"))
             entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
           }
 

@@ -106,6 +106,12 @@ header{
 #login-container{
     font-size: 40px;
 }
+.article{
+    font-size: 30px;
+}
+#shopName{
+    font-size: 40px;
+}
 input:focus { border-color: skyblue; }
 
 .button{

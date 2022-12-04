@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             response["articles"].forEach(element => {
                 let div = document.createElement('div')
                 div.classList.add('article')
-                div.innerHTML = element["name"] + ' ' + element["quantity"] + ' ' + element["price"]
+                div.innerHTML = element["name"] + ' ' + element["quantity"] + 'pce ' + element["price"] + '.-'
                 document.querySelector('#articles').appendChild(div)
             })
 
