@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const init = () => {
     const sendDestination = "create_ticket";
-    const websocketUrl = "ws://localhost:8080";
+    const pollUrl = "poll";
+
 
     const continueButton = document.getElementById("continueButton");
     const checkCircle = document.querySelector(".check-circle");
@@ -27,8 +28,10 @@ const init = () => {
     }
 
     const hidePopup = () => {
-        popup.classList.remove("second");
-        popup.classList.add("first");
+        setTimeout(() => {
+            popup.classList.remove("second");
+            popup.classList.add("first");
+        }, 150);
         popup.classList.remove("show");
         popupBackground.classList.remove("show");
     }
@@ -126,27 +129,42 @@ const init = () => {
         }
         if(qrCode === undefined)
         {
-            qrCode = new QRCode(qrCodeTarget, JSON.stringify(currentId));
+            qrCode = new QRCode(qrCodeTarget, currentId);
         } else {
             qrCode.clear();
-            qrCode.makeCode(JSON.stringify(currentId));
+            qrCode.makeCode(currentId);
         }
         showPopup();
         const showSuccess = () => {
-
-        }
-        return;
-        setTimeout(() => {
             popup.classList.remove("first");
             popup.classList.add("second");
-            checkCircle.classList.remove("animate");
-            setTimeout(() =>  {
-                checkCircle.classList.add("animate");
-                setTimeout(() => {
-                    hidePopup();
-                }, 5000);
-            }, 0);
-        });
+            checkCircle.classList.add("animate");
+            setTimeout(() => {
+                hidePopup();
+                checkCircle.classList.remove("animate");
+            }, 5000);
+        }
+        const startPolling = () => {
+            fetch(pollUrl, {
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    id: currentId
+                }, undefined, 3)
+            }).then(res => {
+                res.json().then((res) => {
+                    let num = Number(res);
+                    if(num === 1) {
+                        showSuccess();
+                    } else if(num === 0) {
+                        setTimeout(startPolling, 500);
+                    }
+                }, (err) => {
+                    console.error(err);
+                });
+            });
+        }
+        startPolling();
     }
 
     const sendList = () => {
@@ -177,7 +195,7 @@ const init = () => {
             res.json().then((res) => {
                 inLogContainer.textContent = JSON.stringify(res, undefined, 2);
                 showQrCodeButton.style.display = null;
-                currentId = Number(res);
+                currentId = Number(res).toString();
             }, (err) => {
                 console.error(err);
             });

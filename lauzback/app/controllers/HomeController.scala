@@ -11,7 +11,7 @@ import java.util.UUID._
 import play.api.libs.json.{JsValue, Json}
 import net.liftweb.json.DefaultFormats
 import net.liftweb.json._
-import classes.{Article, Ticket}
+import classes.{Article, Ticket, TicketWaiting}
 import akka.stream.javadsl.{Flow, Sink, Source}
 import models.DatabaseExecutionContext
 
@@ -65,7 +65,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
       db.withConnection { conn =>
         val s = conn.createStatement()
 
-        val chatte = s.execute(s"SELECT * FROM receipt_entry WHERE receipt_id = $ticket_id")
+        //val chatte = s.execute(s"SELECT * FROM receipt_entry WHERE receipt_id = $ticket_id")
 
         // iterate over the result set
         val resultSet = s.getResultSet
@@ -85,13 +85,21 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
       db.withConnection { conn =>
         val s = conn.createStatement()
 
-        val uuuh =  request.body.asJson.get("id").asOpt[String].get
+        println(request.body.toString)
 
-        val chatte = s.execute("SELECT id FROM receipt WHERE id = " + uuuh + " AND user_id IS NOT NULL")
-        val pfff = s.getResultSet.getString("id")
+        val uuuh =  request.body.asJson.get("id").asOpt[String].getOrElse("-1");
+        var response = "";
+        if(TicketWaiting.TicketMap.getOrElse(Integer.parseInt(uuuh), false)) {
+          response += "1"
+        } else {
+          response += "0"
+        }
+
+        //val chatte = s.execute("SELECT id FROM receipt WHERE id = " + uuuh + " AND user_id IS NOT NULL")
+        //val pfff = s.getResultSet.getString("id")
 
 
-        Ok(Json.toJson(if(pfff == null) "0" else "1"))
+        Ok(Json.toJson(response))
       }
     }(databaseExecutionContext)
   }
@@ -103,15 +111,16 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
         val s = conn.createStatement()
 
         var toto = List[JsValue]()
-        val chatte = s.execute(s"SELECT id FROM receipt WHERE user_id=\"" + uid + "\"")
+        val chatte = s.execute(s"SELECT id, date FROM receipt WHERE user_id=\"" + uid + "\"")
         val resultSet = s.getResultSet
-        var  ids = List[String]()
+        var  ids = List[(String, String)]()
         while (resultSet.next()) {
           val id = resultSet.getString("id")
-          ids = id :: ids
+          val date = resultSet.getString("date")
+          ids = (id, date) :: ids
         }
 
-        for(id <- ids) {
+        for((id, date) <- ids) {
           val chattouille = s.execute("SELECT * FROM receipt_entry WHERE receipt_id = " + id)
 
           // iterate over the result set
@@ -122,7 +131,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
             entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
           }
 
-          toto =  Json.obj("id" -> id, "shopName" -> "Lidl", "articles" -> Json.arr(entries2)) :: toto
+          toto =  Json.obj("id" -> id, "date"-> date, "shopName" -> "Lidl" ,"articles" -> Json.arr(entries2)) :: toto
         }
 
         Ok(Json.arr(toto))
@@ -153,6 +162,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
 
 
 
+
         val s = conn.createStatement()
         val bite = s.execute("SELECT id FROM store WHERE name = '" + m.shopName + "'")
         val shopId = s.getResultSet.getString("id")
@@ -161,6 +171,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
         val key = s.getGeneratedKeys.getInt(1)
 
         println(key)
+        TicketWaiting.TicketMap.addOne(key, false);
 
         for(yep <- m.articles) {
           val s2 = conn.createStatement()

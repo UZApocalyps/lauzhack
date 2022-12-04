@@ -63,6 +63,10 @@ function loadticket() {
                 let div = document.createElement('div')
                 div.classList.add('ticket')
                 div.innerHTML = element["shopName"] + ' ' + element["date"]
+                div.addEventListener('click', function () {
+                    //naviguate to ticket page
+                    window.location.href = "ticket2?id=" + element["id"]}
+                )
                 document.querySelector('.tickets').appendChild(div)
             });
         })

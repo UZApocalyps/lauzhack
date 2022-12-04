@@ -1,6 +1,7 @@
 package controllers
 
 import akka.stream.javadsl.{Flow, Sink, Source}
+import classes.TicketWaiting
 import models.DatabaseExecutionContext
 
 import javax.inject._
@@ -45,6 +46,7 @@ class ReceiptController @Inject()(db: Database, databaseExecutionContext: Databa
           val res = s2.execute("UPDATE receipt SET user_id = '" + userId + "' WHERE id = " + receiptId)
           val out = "Receipt registered"
           conn.close()
+          TicketWaiting.TicketMap(Integer.parseInt(rid)) = true
           Ok("{\"status\":\"ok\"}")
         }
         else {
