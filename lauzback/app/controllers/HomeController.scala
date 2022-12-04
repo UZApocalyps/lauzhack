@@ -80,6 +80,22 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
     }(databaseExecutionContext)
   }
 
+  def poll(): Action[AnyContent] = Action.async { request =>
+    Future {
+      db.withConnection { conn =>
+        val s = conn.createStatement()
+
+        val uuuh =  request.body.asJson.get("id").asOpt[String].get
+
+        val chatte = s.execute("SELECT id FROM receipt WHERE id = " + uuuh + " AND user_id IS NOT NULL")
+        val pfff = s.getResultSet.getString("id")
+
+
+        Ok(Json.toJson(if(pfff == null) "0" else "1"))
+      }
+    }(databaseExecutionContext)
+  }
+
   def tickets(uid: String): Action[AnyContent] = Action.async { request =>
     println("bite au cul")
     Future {

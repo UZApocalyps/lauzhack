@@ -23,3 +23,5 @@ GET     /test2                      controllers.TestController.updateSomething
 POST    /registerticket             controllers.ReceiptController.registerReceipt
 
 GET      /ws                        controllers.WebSocket.socket
+
+POST     /poll                      controllers.HomeController.poll()

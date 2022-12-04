@@ -62,7 +62,7 @@ function loadticket() {
             data[0].forEach(element => {
                 let div = document.createElement('div')
                 div.classList.add('ticket')
-                div.innerHTML = element["shopName"]
+                div.innerHTML = element["shopName"] + ' ' + element["date"]
                 document.querySelector('.tickets').appendChild(div)
             });
         })
