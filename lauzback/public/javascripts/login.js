@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             else{
                 localStorage.setItem('uid', 'test@test.com')
             }
-            window.location.href = "home.html"
+            window.location.href = "home"
 
         }
         else{
