@@ -31,7 +31,7 @@ class ReceiptController @Inject()(db: Database, databaseExecutionContext: Databa
         req.body.asJson
         println(req.body.asRaw)
         val userId = req.body.asJson.get("uid").asOpt[String].get
-        val receiptId = Integer.parseInt(req.body.asJson.get("id_Ticket").asOpt[String].get)
+        val receiptId = Integer.parseInt(req.body.asJson.get("id_ticket").asOpt[String].get)
 
         // Check whether the receipt is already registered
         val s = conn.createStatement()

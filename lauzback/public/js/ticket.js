@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
     //fetch get
-    fetch('https://localhost:9443/ticket', {
+    fetch('ticket', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

@@ -46,18 +46,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
 })
+
 function loadticket() {
     //get uid from localstorage
-   let uid = localStorage.getItem('uid')
-    let url = 'https://localhost:9443/tickets?uid=' + uid
+    let uid = localStorage.getItem('uid')
+    let url = 'tickets?uid=' + uid
     fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
-        })
-        .then(response => {
-            let data = response.json()
+    })
+        .then(async response => {
+            let data = await response.json()
             data[0].forEach(element => {
                 let div = document.createElement('div')
                 div.classList.add('ticket')
@@ -67,11 +68,11 @@ function loadticket() {
         })
 
 
-
 }
+
 function validateticket(ticketId) {
     //fetch post
-    fetch('https://localhost:9443/registerticket', {
+    fetch('registerticket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -81,23 +82,16 @@ function validateticket(ticketId) {
             id_ticket: ticketId
         })
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status == 'success') {
-                //remove all child from tickets
-                let tickets = document.querySelector('.tickets')
-                while (tickets.firstChild) {
-                    tickets.removeChild(tickets.firstChild);
-                }
-                loadticket()
-                    
-            } else {
+        .then(response => {
+            let tickets = document.querySelector('.tickets')
+            while (tickets.firstChild) {
+                tickets.removeChild(tickets.firstChild);
             }
-        }
-        )
+            loadticket()
+        })
         .catch((error) => {
-            console.error('Error:', error);
-        }
+                console.error('Error:', error);
+            }
         );
 
 }

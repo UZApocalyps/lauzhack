@@ -126,15 +126,16 @@ const init = () => {
         }
         if(qrCode === undefined)
         {
-            qrCode = new QRCode(qrCodeTarget, currentId);
+            qrCode = new QRCode(qrCodeTarget, JSON.stringify(currentId));
         } else {
             qrCode.clear();
-            qrCode.makeCode(currentId);
+            qrCode.makeCode(JSON.stringify(currentId));
         }
         showPopup();
         const showSuccess = () => {
 
         }
+        return;
         setTimeout(() => {
             popup.classList.remove("first");
             popup.classList.add("second");
@@ -176,7 +177,7 @@ const init = () => {
             res.json().then((res) => {
                 inLogContainer.textContent = JSON.stringify(res, undefined, 2);
                 showQrCodeButton.style.display = null;
-                currentId = res.token;
+                currentId = Number(res);
             }, (err) => {
                 console.error(err);
             });

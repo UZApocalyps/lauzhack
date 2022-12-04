@@ -141,14 +141,14 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
         val bite = s.execute("SELECT id FROM store WHERE name = '" + m.shopName + "'")
         val shopId = s.getResultSet.getString("id")
 
-        val res = s.execute(s"INSERT INTO receipt(id, date, store_id, user_id) VALUES(NULL, NULL, $shopId, NULL)", Statement.RETURN_GENERATED_KEYS)
+        val res = s.execute(s"INSERT INTO receipt(store_id) VALUES($shopId)", Statement.RETURN_GENERATED_KEYS)
         val key = s.getGeneratedKeys.getInt(1)
 
         println(key)
 
         for(yep <- m.articles) {
           val s2 = conn.createStatement()
-          val res2 = s2.execute(s"INSERT INTO receipt_entry(id, receipt_id, produce_name, unit_price, quantity) VALUES(NULL, $key, '${yep.name}', ${yep.price}, ${yep.quantity})")
+          val res2 = s2.execute(s"INSERT INTO receipt_entry(receipt_id, produce_name, unit_price, quantity) VALUES($key, '${yep.name}', ${yep.price}, ${yep.quantity})")
         }
 
         val resultSet = s.getResultSet
