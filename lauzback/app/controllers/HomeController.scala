@@ -65,7 +65,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
       db.withConnection { conn =>
         val s = conn.createStatement()
 
-        val chatte = s.execute(s"SELECT * FROM receipt_entry WHERE receipt_id = $ticket_id")
+        val _ = s.execute(s"SELECT * FROM receipt_entry WHERE receipt_id = $ticket_id")
 
         // iterate over the result set
         val resultSet = s.getResultSet
@@ -75,7 +75,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
           entries2 = Json.obj("name" -> entry.name, "price" -> entry.price, "quantity" -> entry.quantity) :: entries2
         }
 
-        val doggo = s.execute(s"SELECT date FROM receipt WHERE id = $ticket_id")
+        val _ = s.execute(s"SELECT date FROM receipt WHERE id = $ticket_id")
         val resultSet2 = s.getResultSet
         resultSet2.next()
         val date = resultSet2.getString("date")
@@ -92,16 +92,13 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
 
         println(request.body.toString)
 
-        val uuuh =  request.body.asJson.get("id").asOpt[String].getOrElse("-1");
+        val ticketId =  request.body.asJson.get("id").asOpt[String].getOrElse("-1");
         var response = "";
-        if(TicketWaiting.TicketMap.getOrElse(Integer.parseInt(uuuh), false)) {
+        if(TicketWaiting.TicketMap.getOrElse(Integer.parseInt(ticketId), false)) {
           response += "1"
         } else {
           response += "0"
         }
-
-        //val chatte = s.execute("SELECT id FROM receipt WHERE id = " + uuuh + " AND user_id IS NOT NULL")
-        //val pfff = s.getResultSet.getString("id")
 
 
         Ok(Json.toJson(response))
@@ -115,7 +112,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
         val s = conn.createStatement()
 
         var toto = List[JsValue]()
-        val chatte = s.execute(s"SELECT id, date FROM receipt WHERE user_id=\"" + uid + "\"")
+        val _ = s.execute(s"SELECT id, date FROM receipt WHERE user_id=\"" + uid + "\"")
         val resultSet = s.getResultSet
         var  ids = List[(String, String)]()
         while (resultSet.next()) {
@@ -125,7 +122,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
         }
 
         for((id, date) <- ids) {
-          val chattouille = s.execute("SELECT * FROM receipt_entry WHERE receipt_id = " + id)
+          val _ = s.execute("SELECT * FROM receipt_entry WHERE receipt_id = " + id)
 
           // iterate over the result set
           val resultSet2 = s.getResultSet
@@ -168,7 +165,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
 
 
         val s = conn.createStatement()
-        val bite = s.execute("SELECT id FROM store WHERE name = '" + m.shopName + "'")
+        val _ = s.execute("SELECT id FROM store WHERE name = '" + m.shopName + "'")
         val shopId = s.getResultSet.getString("id")
 
         val res = s.execute(s"INSERT INTO receipt(store_id) VALUES($shopId)", Statement.RETURN_GENERATED_KEYS)

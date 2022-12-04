@@ -24,7 +24,7 @@ class WebSocket @Inject() (cc: ControllerComponents)(implicit system: ActorSyste
       println(msg)
       // call controller.isRegistered every 5 seconds and return the result
       Source.tick(0.seconds, 5.seconds, msg).map { _ =>
-        println(controller.isRegistered(msg) + "bite")
+        println(controller.isRegistered(msg))
       }
       "I received your message: " + msg
     }
