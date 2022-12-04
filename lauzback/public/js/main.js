@@ -1,27 +1,3 @@
-var temp = `{
-    "id": 4,
-    "user_id": 45,
-    "shop_id": 1,
-    "date": "2020-05-01T00:00:00.000Z",
-    "articles": [
-        {
-            "name": "potatoes",
-            "prices": 1.45,
-            "quantity": 2
-        },
-        {
-            "name": "tomatoes",
-            "prices": 2.45,
-            "quantity": 3
-        },
-        {
-            "name": "cucumbers",
-            "prices": 3.45,
-            "quantity": 4
-        }
-    ]
-}`
-
 document.addEventListener("DOMContentLoaded", function (event) {
 
     //Easter egg :D
@@ -72,31 +48,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
 })
 function loadticket() {
     //get uid from localstorage
-    let uid = localStorage.getItem('uid')
+   let uid = localStorage.getItem('uid')
     let url = 'https://localhost:9443/tickets?uid=' + uid
-    //XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function () {
-        if (xhr.status == 200) {
-            let data = JSON.parse(xhr.responseText)
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
         }
-        else {
-            alert('error')
-        }
-    }
-    xhr.headers = {
-        'Content-Type': 'application/json',
-        'Cors': 'no-cors',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
-        
-    }
-    //cors
-    xhr.body = ""
-    xhr.send();
+        })
+        .then(response => {
+            let data = response.json()
+            data[0].forEach(element => {
+                let div = document.createElement('div')
+                div.classList.add('ticket')
+                div.innerHTML = element["shopName"]
+                document.querySelector('.tickets').appendChild(div)
+            });
+        })
+
 
 
 }
@@ -108,16 +77,21 @@ function validateticket(ticketId) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            uid: 32,
+            uid: localStorage.getItem('uid'),
             id_ticket: ticketId
         })
     })
         .then(response => response.json())
         .then(data => {
             if (data.status == 'success') {
-                alert('Ticket Validated')
+                //remove all child from tickets
+                let tickets = document.querySelector('.tickets')
+                while (tickets.firstChild) {
+                    tickets.removeChild(tickets.firstChild);
+                }
+                loadticket()
+                    
             } else {
-                alert('Ticket Invalid')
             }
         }
         )
