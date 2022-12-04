@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+body {
+    background: rgb(233,233,233);
+background: linear-gradient(360deg, rgb(210, 210, 210) 0%, rgba(255,255,255,1) 30%);
+    padding: 0;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #3C70CF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 50px;
+}
+.logo{
+    height: 150px;
+    width: 150px;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 90%;
+
+}
+.no-center{
+    justify-content: unset !important ;
+
+}
+#tickets-container{
+    height: 700px;
+}
+#articles{
+    width: 100%;
+    height: 650px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+#backbtn{
+    scale: 3;
+    margin-bottom: 70px;
+}
+.glass-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    width: inherit;
+
+}
+.receipt-title{
+    font-size: 5rem;
+    color: #3C70CF;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.glass-title {
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.glass-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    min-height: 50px;
+    width: 100%;
+
+}
+.glass-content-item input{
+    border: none;
+    margin: 5px 0px 5px 0px;
+    font-size: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-bottom: solid 1px #3C70CF;
+    margin: 10px;
+    
+}
+#login-container{
+    font-size: 40px;
+}
+.article{
+    font-size: 40px;
+    text-align: center;
+}
+#shopName{
+    font-size: 50px;
+}
+input:focus { border-color: skyblue; }
+
+.button{
+    padding:10px 50px 10px 50px;
+    border-radius: 25px;
+    border:none;
+    background-color: #3C70CF;
+    color: white;
+}
+#close-popup{
+    font-size: 80px;
+
+}
+.round-button {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    padding: 70px;
+    margin-bottom: 60px;
+    background-color: #3C70CF;
+    
+}
+
+.mb-25{
+    margin-bottom: 25px;
+}
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.full-glass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tickets{
+    width: 100%;
+    overflow-y: scroll;
+    height: 700px;
+    color:black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    /*hide scrollbar*/
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+.tickets ::-webkit-scrollbar {
+    display: none; 
+}
+
+.ticket{
+    height: 250px;
+    border-bottom: solid 1px black;
+    font-size: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,41 +1,126 @@
-//document ready
+var temp = `{
+    "id": 4,
+    "user_id": 45,
+    "shop_id": 1,
+    "date": "2020-05-01T00:00:00.000Z",
+    "articles": [
+        {
+            "name": "potatoes",
+            "prices": 1.45,
+            "quantity": 2
+        },
+        {
+            "name": "tomatoes",
+            "prices": 2.45,
+            "quantity": 3
+        },
+        {
+            "name": "cucumbers",
+            "prices": 3.45,
+            "quantity": 4
+        }
+    ]
+}`
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    document.querySelector('.btn').addEventListener('click', async () => {
-        print('clicked')
-        var constraints = {
-            video: true,
-            audio: false
+    //Easter egg :D
+    document.querySelector('.logo').addEventListener('click', function () {
+        if (localStorage.getItem('uid') == "code_lyoko") {
+            let audio = document.querySelector("#audio")
+            audio.play()
         }
-        navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
-            print('success')
-            /* do stuff */
-        }).catch(function(err) {
-            //log to console first 
-            console.log(err); /* handle the error */
-            if (err.name == "NotFoundError" || err.name == "DevicesNotFoundError") {
-                //required track is missing 
-                print('no camera found');
-            } else if (err.name == "NotReadableError" || err.name == "TrackStartError") {
-                //webcam or mic are already in use 
-                print('camera in use');
-            } else if (err.name == "OverconstrainedError" || err.name == "ConstraintNotSatisfiedError") {
-                //constraints can not be satisfied by avb. devices 
-                print('no camera found');
-            } else if (err.name == "NotAllowedError" || err.name == "PermissionDeniedError") {
-                //permission denied in browser 
-                print('permission denied');
-            } else if (err.name == "TypeError" || err.name == "TypeError") {
-                //empty constraints object 
-                print('empty constraints');
-            } else {
-                //other errors 
-                print('other errors');
-            }
-        });
     })
-})
 
-function print(a){
-    document.querySelector('.log').innerHTML += a + '<br>';
+    loadticket()
+    var qrScanner = null;
+    document.querySelector("#close-popup").addEventListener("click", function () {
+        document.querySelector(".popup").style.display = "none";
+        if (qrScanner != null) {
+            qrScanner.stop()
+            qrScanner.destroy()
+        }
+    })
+    document.querySelector('#scan').addEventListener('click', function () {
+        document.querySelector('.popup').style.display = 'flex';
+        import('./qr-scanner.min.js').then((module) => {
+            const QrScanner = module.default;
+            // do something with QrScanner
+            qrScanner = new QrScanner(
+                document.querySelector('#video'),
+                result => {
+                    console.log('decoded qr code:', result.data)
+                    qrScanner.stop();
+                    qrScanner.destroy();
+                    alert("Ticket Scanned")
+                    validateticket(result.data)
+                    document.querySelector('.popup').style.display = 'none';
+
+                    /* your options or returnDetailedScanResult: true if you're not specifying any other options */
+                },
+                {
+                    highlightScanRegion: true,
+                    highlightCodeOutline: true,
+                }
+            );
+
+            qrScanner.start();
+
+        });
+    });
+
+})
+function loadticket() {
+    //get uid from localstorage
+    let uid = localStorage.getItem('uid')
+    //fetch get
+    fetch('https://localhost:3000/tickets', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'uid': uid
+        },
+    })
+        .then(response => {
+            let data = response.json()
+            data.forEach(element => {
+                let div = document.createElement('div')
+                div.classList.add('ticket')
+                div.innerHTML = element.id_Ticket
+                div.addEventListener('click', function () {
+                    //move to ticket page
+                    window.location.href = 'ticket.html?id=' + element.id_Ticket
+                })
+                document.querySelector('.tickets').appendChild(div)
+            });
+        })
+
 }
+function validateticket(ticketId) {
+    //fetch post
+    fetch('https://localhost:3000/registerticket', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            uid: 32,
+            id_ticket: ticketId
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status == 'success') {
+                alert('Ticket Validated')
+            } else {
+                alert('Ticket Invalid')
+            }
+        }
+        )
+        .catch((error) => {
+            console.error('Error:', error);
+        }
+        );
+
+}
+
