@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 body {
-    background: rgb(45, 0, 15);
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-position: fixed;
-    background-repeat: no-repeat;
+    background: rgb(233,233,233);
+background: linear-gradient(360deg, rgb(210, 210, 210) 0%, rgba(255,255,255,1) 30%);
     padding: 0;
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
-    font-family: Roboto, sans-serif;
+    font-family: Tahoma, Verdana, sans-serif;
     color: #3C70CF;
     display: flex;
     align-items: center;
@@ -27,7 +23,7 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color:white;
+    color:black;
     font-size: 50px;
 }
 .logo{
@@ -39,7 +35,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 8 0%;
+    height: 80%;
     width: 90%;
 
 }
@@ -48,7 +44,7 @@ header{
 
 }
 #tickets-container{
-    height: 500px;
+    height: 700px;
 }
 
 .glass-container {
@@ -63,7 +59,7 @@ header{
 }
 .receipt-title{
     font-size: 5rem;
-    color: white;
+    color: #3C70CF;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -93,12 +89,16 @@ header{
 
 }
 .glass-content-item input{
-    border-radius: 25px;
     border: none;
     margin: 5px 0px 5px 0px;
-    font-size: 16px;
+    font-size: 40px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-bottom: solid 1px #3C70CF;
+    margin: 10px;
     
+}
+#login-container{
+    font-size: 40px;
 }
 input:focus { border-color: skyblue; }
 
@@ -151,15 +151,22 @@ input:focus { border-color: skyblue; }
 .tickets{
     width: 100%;
     overflow-y: scroll;
-    height: 500px;
+    height: 700px;
     color:black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    /*hide scrollbar*/
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+.tickets ::-webkit-scrollbar {
+    display: none; 
 }
 
 .ticket{
     height: 250px;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px black;
     font-size: 50px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -169,7 +176,7 @@ input:focus { border-color: skyblue; }
 }
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;

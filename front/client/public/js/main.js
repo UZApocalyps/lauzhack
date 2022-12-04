@@ -73,27 +73,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function loadticket() {
     //get uid from localstorage
     let uid = localStorage.getItem('uid')
-    //fetch get
-    fetch('https://localhost:3000/tickets', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'uid': uid
-        },
-    })
-        .then(response => {
-            let data = response.json()
-            data.forEach(element => {
-                let div = document.createElement('div')
-                div.classList.add('ticket')
-                div.innerHTML = element.id_Ticket
-                div.addEventListener('click', function () {
-                    //move to ticket page
-                    window.location.href = 'ticket.html?id=' + element.id_Ticket
-                })
-                document.querySelector('.tickets').appendChild(div)
-            });
-        })
+    let url = 'https://192.168.195.9:9443/tickets?uid=' + uid
+    //XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            let data = JSON.parse(xhr.responseText)
+        }
+        else {
+            alert('error')
+        }
+    }
+    xhr.headers = {
+        'Content-Type': 'application/json',
+        'Cors': 'no-cors',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
+        
+    }
+    //cors
+    xhr.body = ""
+    xhr.send();
+
 
 }
 function validateticket(ticketId) {
