@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
     //fetch get
-    fetch('https://localhost:3000/ticket', {
+    fetch('https://localhost:9443/ticket', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'uid': localStorage.getItem('uid'),
+            ' ': localStorage.getItem('uid'),
             'ticket_id': id //get parameter
         },
     })

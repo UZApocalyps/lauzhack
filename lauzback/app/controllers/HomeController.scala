@@ -43,6 +43,18 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
     Ok(views.html.index())
   }
 
+  def login() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.login())
+  }
+
+  def ticket2() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.ticket())
+  }
+
+  def home() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.home())
+  }
+
   def shopping() = Action { implicit request: Request[AnyContent] =>
     
     Ok(views.html.shopping())
@@ -69,6 +81,7 @@ class HomeController @Inject()(db: Database, databaseExecutionContext: DatabaseE
   }
 
   def tickets(uid: String): Action[AnyContent] = Action.async { request =>
+    println("bite au cul")
     Future {
       db.withConnection { conn =>
         val s = conn.createStatement()

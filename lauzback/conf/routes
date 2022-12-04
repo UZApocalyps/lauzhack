@@ -10,6 +10,10 @@ GET     /shopping                   controllers.HomeController.shopping()
 GET     /tickets                    controllers.HomeController.tickets(uid)
 GET     /ticket                     controllers.HomeController.ticket(uid, ticket_id)
 
+GET    /login                      controllers.HomeController.login()
+GET     /ticket2                    controllers.HomeController.ticket2()
+GET     /home                       controllers.HomeController.home()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 

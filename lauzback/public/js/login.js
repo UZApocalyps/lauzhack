@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 localStorage.setItem('uid', "code_lyoko")
             }
             else{
-                localStorage.setItem('uid', 'pipo@gmail.com')
+                localStorage.setItem('uid', 'test@test.com')
             }
             window.location.href = "home.html"
 

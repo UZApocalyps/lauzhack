@@ -1,9 +1,9 @@
 <html>
 
 <head>
-    <link rel="manifest" href="./js/manifest.webmanifest">
-    <script defer src="./js/main.js" type="module"></script>
-    <script  src="./js/qr-scanner-worker.min.js" type="module"></script>
+    <link rel="manifest" href="../../../front/client/public/js/manifest.webmanifest">
+    <script defer src="../../../front/client/public/js/main.js" type="module"></script>
+    <script src="../../../front/client/public/js/qr-scanner-worker.min.js" type="module"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./serviceWorker.js')
@@ -23,7 +23,7 @@
     <input type="file" accept="image/*;capture=camera">
     <video id="video"></video>
 
-    <script src="./js/pwa.js"></script>
+    <script src="../../../front/client/public/js/pwa.js"></script>
 </body>
 
 </html>
